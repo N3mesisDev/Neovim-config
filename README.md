@@ -114,7 +114,11 @@ choco install neovim -y
 ## Plugin Manager
 We will use [Lazy.nvim](https://lazy.folke.io/) as our plugin manager for Neovim. Lazy.nvim is designed to be fast, flexible, and minimalistic, making it an excellent choice for managing plugins efficiently. It is a key player in the expanding ecosystem of Neovim plugin managers, each of which provides unique features and trade-offs.
 
-__Requirements to use lazy.nvim__
+<p align="center">
+  <img width="670" alt="image" src="https://github.com/user-attachments/assets/faea1641-3b72-4d73-a0fa-8c0e09f781a5">
+</p>
+
+__Requirements for lazy.nvim__
 - Neovim >= 0.8.0 (needs to be built with *LuaJIT*)
 - Git >= 2.19.0 (for partial clones supports)
 - A [Nerd font](https://www.nerdfonts.com/) __(optional)__
@@ -122,12 +126,16 @@ __Requirements to use lazy.nvim__
 ## Tokyo Night
 [Tokyo Night](https://github.com/folke/tokyonight.nvim) is the color scheme I used for my IDE, but you can choose another.
 
-<img width="1094" alt="Captura de pantalla 2024-08-20 121443" src="https://github.com/user-attachments/assets/403b69c1-a4ba-459c-8f9d-dadf0a9251bf">
+<p align="center">
+  <img width="1094" alt="Captura de pantalla 2024-08-20 121443" src="https://github.com/user-attachments/assets/403b69c1-a4ba-459c-8f9d-dadf0a9251bf">  
+</p>
 
 ## Telescope
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) is a highly extendable fuzzy finder over lists. Built on the latest awesome features from neovim core. Telescope is centered around modularity, allowing for easy customization.
 
-![Preview](https://i.imgur.com/TTTja6t.gif)
+<p align="center">
+  <img width="842" alt="image" src="https://github.com/user-attachments/assets/cfe82028-a792-45f0-8b1c-5811a28a5d14">
+</p>
 
 __Requirements for Telescope__
 - Install *ripgrep*
@@ -173,8 +181,9 @@ __Requirements for Telescope__
   ```
 
 Telescope UI select sets `vim.ui.select` to telescope. That means for example that neovim core stuff can fill the telescope picker. Example would be `lua vim.lsp.buf.code_action()`.
-
-<img width="1094" alt="Telescope UI Select code_action" src="https://github.com/user-attachments/assets/7a999f22-16a8-40c6-bfdc-a7437f7ab34f">
+<p align="center">
+  <img width="1094" alt="Telescope UI Select code_action" src="https://github.com/user-attachments/assets/7a999f22-16a8-40c6-bfdc-a7437f7ab34f">
+</p>
 
 ## TreeSitter
 [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) is a parser generator tool and an incremental parsing library used in various text editors, including Neovim, to provide precise and efficient syntax highlighting, code navigation, and other code-aware features.
@@ -186,23 +195,26 @@ Traditional highlighting (left) vs Treesitter-based highlighting (right). More e
 ## NeoTree
 [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) is a Neovim plugin to browse the file system and other tree like structures in whatever style suits you, including sidebars, floating windows, netrw split style, or all of them at once.
 
-<img width="1094" alt="image" src="https://github.com/user-attachments/assets/51cabda1-9587-445d-ade6-34a8a9ed34d9">
+<p align="center">
+  <img width="841" alt="image" src="https://github.com/user-attachments/assets/fc9c2634-eeee-475a-b658-109949bd02c7">
+</p>
 
 ## Lualine
 [Lualine](https://github.com/nvim-lualine/lualine.nvim) is a fast and highly customizable status line plugin for Neovim, written in Lua. It is designed to replace the default status line in neovim with more modern, feature-rich, and configurable alternative.
 
-<p>
-<img width='700' src='https://user-images.githubusercontent.com/41551030/108650373-bb025580-74bf-11eb-8682-2c09321dd18e.png'/>
-<img width='700' src='https://user-images.githubusercontent.com/41551030/108650377-bd64af80-74bf-11eb-9c55-fbfc51b39fe8.png'/>
-<img width='700' src='https://user-images.githubusercontent.com/41551030/108650378-be95dc80-74bf-11eb-9718-82b242ecdd54.png'/>
-<img width='700' src='https://user-images.githubusercontent.com/41551030/108650381-bfc70980-74bf-11eb-9245-85c48f0f154a.png'/>
-<img width='700' src='https://user-images.githubusercontent.com/41551030/103467925-32372b00-4d54-11eb-88d6-6d39c46854d8.png'/>
+<p align="center">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/4021ab01-3a87-4075-b356-ed4906f29357">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/28c8a544-09ea-4ea5-83f9-d843d79bf038">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/9b998d40-b85e-49d4-a720-19af9ecb35e7">
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/72863729-615b-407d-aecb-866826fccb1a">
 </p>
 
 # Mason & LSP (Language Server Protocol)
 [Mason](https://github.com/williamboman/mason.nvim) is a portable package manager for Neovim that runs everywhere Neovim runs. Manage LSP server, DAP servers, linters and formatters.
 
-<img width="824" alt="image" src="https://github.com/user-attachments/assets/594a692c-e511-423d-8f0c-30948f224923">
+<p align="center">
+  <img width="824" alt="image" src="https://github.com/user-attachments/assets/594a692c-e511-423d-8f0c-30948f224923">
+</p>
 
 [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim) bridges `mason.nvim` with the `lspconfig` plugin, making it easier to use both plugins together.
 
@@ -219,14 +231,22 @@ __Requirements to use mason-lspconfig.nvim__
 ## Completions
 Completions.lua use [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) a completion engine plugin for neovim written in Lua. Completion sources are installed from external repositories and "sourced".
 
-https://github.com/user-attachments/assets/f1516e03-b334-4c0a-b405-50ff36515c88
+<p align="center">
+  <img width="840" alt="image" src="https://github.com/user-attachments/assets/d5db68e0-612f-444d-8717-2d32b716ad6e">
+</p>
 
 ## Debugging
-debugging.lua use [nvim-dap](https://github.com/mfussenegger/nvim-dap) a Debug Adapter Protocol client implementation for Neovim. `nvim-dap` allows you to:
+debugging.lua use [nvim-dap](https://github.com/mfussenegger/nvim-dap) plugin a Debug Adapter Protocol client implementation for Neovim. `nvim-dap` allows you to:
   - Launch an application to debug
   - Attach to running applications and debug them
   - Set breakpoints and step through code
   - Insepct the state of the application
+
+And [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) plugin a UI for nvim-dap which provides a good out of the box configuration.
+
+<p align="center">
+  ![preview](https://user-images.githubusercontent.com/24252670/191198389-a1321363-c0f1-4ff1-b663-ab1350d2b393.png)
+</p>
 
 # Enhancing Productivity
 ## Keybindings
@@ -264,3 +284,6 @@ __Debugging keybindings__
 | ----------------------- | -------------------------------- |
 | __Space + db__          | Toggle breakpoint                |
 | __Space + dc__          | Continue                         |
+| __Space + ds__          | Step over                        |
+| __Space + di__          | Step into                        |
+| __Space + do__          | Step out                         |
