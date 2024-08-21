@@ -5,25 +5,34 @@ return {
     lazy = false,  -- Load this plugin immediately when Neovim starts
 
     config = function()
-      -- Setup Mason, which handles the installation and management of LSP servers
+      -- Setup Mason, which handles the installation and management of LSP servers.
+      -- This function initializes Mason with its default settings.
       require("mason").setup()
     end
   },
-  -- Plugin for integrating Mason with `nvim-lspconfig`
+  
+  -- Plugin for integrating Mason with `nvim-lspconfig`.
+  -- This plugin connects Mason to the built-in LSP configuration tool `nvim-lspconfig`.
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,  -- Load this plugin immediately when Neovim starts
+
     opts = {
-      auto_install = true,  -- Automatically install LSP servers defined in `ensure_installed`
+      auto_install = true,  -- Automatically install LSP servers that are listed in `ensure_installed`.
     },
   },
-  -- Core plugin for configuring built-in LSP support
+  
+  -- Core plugin for configuring built-in LSP (Language Server Protocol) support.
+  -- This plugin provides easy configurations for various language servers.
   {
     "neovim/nvim-lspconfig",
     lazy = false,  -- Load this plugin immediately when Neovim starts
 
     config = function()
-      -- Setup Mason-LSPConfig to manage LSP servers
+      -- Capabilities object is used to advertise the features supported by nvim-cmp to LSP servers.
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+      -- Setup Mason-LSPConfig to manage the installation and configuration of LSP servers.
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",      -- Lua language server
@@ -37,21 +46,31 @@ return {
         },
       })
 
-      -- Load `lspconfig` for configuring LSP servers
+      -- Load `lspconfig` module, which is used to configure LSP servers.
       local lspconfig = require("lspconfig")
 
-      -- Setup each LSP server
-      lspconfig.lua_ls.setup({})       -- Configure Lua language server
-      lspconfig.tsserver.setup({})     -- Configure TypeScript server
-      lspconfig.html.setup({})         -- Configure HTML server
-      lspconfig.pylsp.setup({})        -- Configure Python server
+      -- Setup each LSP server with the necessary configurations, including capabilities.
+      lspconfig.lua_ls.setup({ capabilities = capabilities })       -- Configure Lua language server
+      lspconfig.tsserver.setup({ capabilities = capabilities })     -- Configure TypeScript language server
+      lspconfig.html.setup({ capabilities = capabilities })         -- Configure HTML language server
+      lspconfig.pylsp.setup({ capabilities = capabilities })        -- Configure Python language server
+      lspconfig.pyright.setup({ capabilities = capabilities })      -- Configure alternative Python language server
+      lspconfig.tailwindcss.setup({ capabilities = capabilities })  -- Configure Tailwind CSS language server
+      lspconfig.unocss.setup({ capabilities = capabilities })       -- Configure UnoCSS language server
+      lspconfig.jdtls.setup({ capabilities = capabilities })        -- Configure Java language server
 
-      -- Key mappings for LSP functions
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})          -- Show hover information
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {}) -- Go to definition
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {}) -- Find references
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) -- Show code actions
+      -- Define key mappings for various LSP functions:
+      -- K: Show hover information about the symbol under the cursor.
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+
+      -- <leader>gd: Go to the definition of the symbol under the cursor.
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+
+      -- <leader>gr: List references to the symbol under the cursor.
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+
+      -- <leader>ca: Show available code actions for the current line or selection.
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end
   },
 }
-
