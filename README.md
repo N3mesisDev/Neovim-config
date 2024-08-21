@@ -3,6 +3,10 @@
   <img src="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png" alt="Neovim">
 </h1>
 
+__Language__
+  - [<sub>ES</sub> Español](README.es.md)
+  - <sub>EN</sub> English
+
 __*Quick Links*__
 - *Main*
   - [Init](init.lua)
@@ -19,7 +23,7 @@ __*Quick Links*__
   - [Telescope](lua/plugins/telescope.lua)
   - [TokyoNight](lua/plugins/tokyo-night.lua)
   - [TreeSitter](lua/plugins/treesitter.lua)
-  - 
+
 # Overview
 This guide will walk you through the process of creating a custom Integrated Development Environment (IDE) using Neovim. By leveraging Neovim’s powerful features and extensive plugin ecosystem, you can tailor the editor to meet your specific development needs. Here’s what you can expect from the guide:
 
@@ -188,7 +192,9 @@ Telescope UI select sets `vim.ui.select` to telescope. That means for example th
 ## TreeSitter
 [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) is a parser generator tool and an incremental parsing library used in various text editors, including Neovim, to provide precise and efficient syntax highlighting, code navigation, and other code-aware features.
 
-![202753610-e923bf4e-e88f-494b-bb1e-d22a7688446f](https://github.com/user-attachments/assets/dfb31c66-5abd-46dd-872c-001d29e9a94b)
+<p align="center">
+  ![202753610-e923bf4e-e88f-494b-bb1e-d22a7688446f](https://github.com/user-attachments/assets/dfb31c66-5abd-46dd-872c-001d29e9a94b)
+</p>
 
 Traditional highlighting (left) vs Treesitter-based highlighting (right). More examples can be found [here](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Gallery).
 
